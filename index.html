@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel to VCF Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Input untuk unggah file dan pilihan sheet -->
+    <input type="file" id="file-upload" accept=".xlsx, .xls" />
+    <br><br>
+    Pilih Sheet:
+    <select id="sheet-select"></select>
+    <br><br>
+
+
+    <!-- Input untuk rentang dan prefix kontak -->
+    <label for="admin-range">Rentang Admin:</label>
+    <input type="text" id="admin-range" placeholder="Contoh: A1:A10" />
+    <br>
+    <label for="navy-range">Rentang Navy:</label>
+    <input type="text" id="navy-range" placeholder="Contoh: A11:A20" />
+    <br>
+    <label for="member-range">Rentang Anggota:</label>
+    <input type="text" id="member-range" placeholder="Contoh: A21:A30" />
+    <br><br>
+
+    <label for="admin-prefix">Prefix Admin:</label>
+    <input type="text" id="admin-prefix" placeholder="Admin" />
+    <br>
+    <label for="navy-prefix">Prefix Navy:</label>
+    <input type="text" id="navy-prefix" placeholder="Navy" />
+    <br>
+    <label for="member-prefix">Prefix Anggota:</label>
+    <input type="text" id="member-prefix" placeholder="Anggota" />
+    <br><br>
+
+    <!-- Input untuk nama file output -->
+    <label for="output-filename">Nama file output:</label>
+    <input type="text" id="output-filename" placeholder="Nama file tanpa ekstensi" />
+    <br><br>
+
+    <!-- Opsi split file -->
+    <label for="split-files">Pisahkan file Admin + Navy dan Anggota:</label>
+    <input type="checkbox" id="split-files" />
+    <br><br>
+
+    
+    <!-- Tombol untuk mengonversi ke VCF -->
+    <button id="convert-btn">Convert to VCF</button>
+<!-- Tabel untuk menampilkan isi file Excel -->
+<table id="excel-table"></table>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
